@@ -3,23 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>SPAM X BAN - by OSK</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css"/>
@@ -30,102 +22,79 @@
 <!-- LOGIN SYSTEM -->
 <div id="auth">
   <div class="auth-box">
-
     <h1 class="glitch">SPAM X BAN</h1>
-
     <div class="input-container">
       <i class="fas fa-lock input-icon"></i>
-
-      <input
-        type="password"
-        id="pass"
-        placeholder="PASSWORD"
-      >
+      <input type="password" id="pass" placeholder="PASSWORD">
     </div>
-
     <button class="btn main-btn" onclick="login()">
-      <i class="fas fa-terminal"></i>
-      ACCESS
+      <i class="fas fa-terminal"></i> ACCESS
     </button>
-
-    <p id="err" class="error">
-      ACCESS DENIED
-    </p>
-
+    <p id="err" class="error">ACCESS DENIED</p>
   </div>
 </div>
 
 <!-- SITE -->
-<div id="app" class="hidden">
-
+<main id="app" class="hidden">
   <!-- Grid Background -->
   <div class="grid-bg"></div>
 
   <!-- Demo Banner -->
   <div id="demo-banner">
-    <i class="fas fa-eye"></i>
-    Demo Mode — Read-only access.
+    <i class="fas fa-eye"></i> Demo Mode — Read-only access.
   </div>
 
   <!-- Navigation -->
   <nav class="nav">
-
     <div class="container nav-inner">
-
       <a href="/" class="nav-logo">
         <div class="nav-logo-icon">
           <i class="fas fa-skull-crossbones"></i>
         </div>
-
         <span>SPAM X BAN</span>
       </a>
 
+      <!-- Desktop Actions -->
       <div class="nav-actions">
-
-        <a href="/login" class="btn btn-ghost">
-          Log In
-        </a>
-
-        <a href="#" class="btn btn-primary">
-          Get Started
-        </a>
-
+        <a href="/login" class="btn btn-ghost">Log In</a>
+        <a href="#" class="btn btn-primary">Get Started</a>
       </div>
 
+      <!-- Mobile Toggle Button (Added) -->
+      <button id="nav-toggle" class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
 
+    <!-- Mobile Menu (Added) -->
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="/login" class="btn btn-ghost">Log In</a>
+      <a href="#" class="btn btn-primary">Get Started</a>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-
     <div class="container">
-
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        All Systems Online
+        All Systems Online <span style="margin: 0 8px;">|</span> <span id="clock">--:--:--</span>
       </div>
 
       <h1>
         The all-in-one <br/>
-        <span class="gradient-text">
-          social growth
-        </span>
-        platform.
+        <span class="gradient-text">social growth</span> platform.
       </h1>
 
-      <p>
-        Automated delivery for Instagram, TikTok, Twitter,
-        WhatsApp and more.
-      </p>
+      <p>Automated delivery for Instagram, TikTok, Twitter, WhatsApp and more.</p>
 
+      <div class="hero-cta">
+        <a href="#" class="btn btn-primary btn-lg">Start Now</a>
+      </div>
     </div>
-
   </section>
-
-</div>
+</main>
 
 <script src="script.js"></script>
-
 </body>
 </html>
