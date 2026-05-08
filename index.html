@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,80 +16,79 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-<!-- LOGIN SYSTEM -->
+<!-- SYSTÈME D'ACCÈS -->
 <div id="auth">
   <div class="auth-box">
     <h1 class="glitch">SPAM X BAN</h1>
     <div class="input-container">
       <i class="fas fa-lock input-icon"></i>
-      <input type="password" id="pass" placeholder="PASSWORD">
+      <input type="password" id="pass" placeholder="MOT DE PASSE">
     </div>
     <button class="btn main-btn" onclick="login()">
-      <i class="fas fa-terminal"></i> ACCESS
+      <i class="fas fa-terminal"></i> ACCÉDER
     </button>
-    <p id="err" class="error">ACCESS DENIED</p>
+    <p id="err" class="error">ACCÈS REFUSÉ</p>
   </div>
 </div>
 
-<!-- SITE -->
+<!-- CONTENU DU SITE -->
 <main id="app" class="hidden">
-  <!-- Grid Background -->
   <div class="grid-bg"></div>
 
-  <!-- Demo Banner -->
   <div id="demo-banner">
-    <i class="fas fa-eye"></i> Demo Mode — Read-only access.
+    <i class="fas fa-eye"></i> Mode Démo — Accès en lecture seule.
   </div>
 
   <!-- Navigation -->
   <nav class="nav">
     <div class="container nav-inner">
-      <a href="/" class="nav-logo">
+      <a href="#" class="nav-logo">
         <div class="nav-logo-icon">
           <i class="fas fa-skull-crossbones"></i>
         </div>
         <span>SPAM X BAN</span>
       </a>
 
-      <!-- Desktop Actions -->
+      <!-- Actions Desktop -->
       <div class="nav-actions">
-        <a href="/login" class="btn btn-ghost">Log In</a>
-        <a href="#" class="btn btn-primary">Get Started</a>
+        <a href="#" class="btn btn-ghost">Connexion</a>
+        <a href="#" class="btn btn-primary">Démarrer</a>
       </div>
 
-      <!-- Mobile Toggle Button (Added) -->
+      <!-- Bouton Menu Mobile -->
       <button id="nav-toggle" class="nav-toggle">
         <i class="fas fa-bars"></i>
       </button>
     </div>
 
-    <!-- Mobile Menu (Added) -->
+    <!-- Menu Mobile -->
     <div id="mobile-nav" class="mobile-nav">
-      <a href="/login" class="btn btn-ghost">Log In</a>
-      <a href="#" class="btn btn-primary">Get Started</a>
+      <a href="#" class="nav-link">Connexion</a>
+      <a href="#" class="btn btn-primary">Démarrer</a>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        All Systems Online <span style="margin: 0 8px;">|</span> <span id="clock">--:--:--</span>
+        Systèmes Opérationnels <span style="margin: 0 8px; opacity: 0.3;">|</span> <span id="clock">--:--:--</span>
       </div>
 
       <h1>
-        The all-in-one <br/>
-        <span class="gradient-text">social growth</span> platform.
+        La plateforme <br/>
+        <span class="gradient-text">social growth</span> <br/>
+        tout-en-un.
       </h1>
 
-      <p>Automated delivery for Instagram, TikTok, Twitter, WhatsApp and more.</p>
+      <p>Automatisation intelligente pour Instagram, TikTok, Twitter, WhatsApp et plus encore.</p>
 
       <div class="hero-cta">
-        <a href="#" class="btn btn-primary btn-lg">Start Now</a>
+        <a href="#" class="btn btn-primary btn-lg">Essayer maintenant</a>
+        <a href="#" class="btn btn-ghost btn-lg">Documentation</a>
       </div>
     </div>
   </section>
