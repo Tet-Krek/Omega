@@ -6,12 +6,7 @@
 
   <title>SPAM X BAN - by OSK</title>
 
-  <meta name="description"
-    content="Grow your social media presence with Easy Booster. Automated delivery, fast processing, and secure payments for Instagram, TikTok, Twitter, WhatsApp and more." />
-
-  <meta name="theme-color" content="#050505"/>
-
-  <!-- Google Font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
@@ -31,29 +26,45 @@
 </head>
 
 <body>
- <div class="container">
-        <div id="auth">
-            <div class="auth-box">
-                <h1 class="glitch" data-text="NAXE ACCESS">NAXE ACCESS</h1>
-                <div class="input-container">
-                    <i class="fas fa-lock input-icon"></i>
-                    <input type="password" id="pass" placeholder="PASSWORD">
-                </div>
-                <button class="btn main-btn" onclick="login()">
-                    <i class="fas fa-terminal"></i> INITIALIZE
-                </button>
-                <p id="err" class="error">ACCESS DENIED</p>
-            </div>
-        </div>
+
+<!-- LOGIN SYSTEM -->
+<div id="auth">
+  <div class="auth-box">
+
+    <h1 class="glitch">SPAM X BAN</h1>
+
+    <div class="input-container">
+      <i class="fas fa-lock input-icon"></i>
+
+      <input
+        type="password"
+        id="pass"
+        placeholder="PASSWORD"
+      >
+    </div>
+
+    <button class="btn main-btn" onclick="login()">
+      <i class="fas fa-terminal"></i>
+      ACCESS
+    </button>
+
+    <p id="err" class="error">
+      ACCESS DENIED
+    </p>
+
+  </div>
+</div>
+
+<!-- SITE -->
+<div id="app" class="hidden">
+
   <!-- Grid Background -->
-  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="grid-bg"></div>
 
   <!-- Demo Banner -->
   <div id="demo-banner">
     <i class="fas fa-eye"></i>
-    Demo Mode — Read-only access. You are viewing a live preview of the user dashboard.
-
-    <a href="/demo/logout">Exit Demo</a>
+    Demo Mode — Read-only access.
   </div>
 
   <!-- Navigation -->
@@ -69,41 +80,21 @@
         <span>SPAM X BAN</span>
       </a>
 
-     
       <div class="nav-actions">
-        <a href="/login" class="btn btn-ghost">Log In</a>
 
-        <a href="#" onclick="handleStartReacting(event)" class="btn btn-primary">
-          Get Started
-          <i class="fas fa-arrow-right"></i>
+        <a href="/login" class="btn btn-ghost">
+          Log In
         </a>
-      </div>
 
-      <button class="nav-toggle" id="nav-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
+        <a href="#" class="btn btn-primary">
+          Get Started
+        </a>
+
+      </div>
 
     </div>
 
   </nav>
-
-  <!-- Mobile Navigation -->
-  <div class="mobile-nav" id="mobile-nav">
-
-
-    <div class="mobile-cta">
-
-      <a href="/login" class="btn btn-ghost">
-        Log In
-      </a>
-
-      <a href="#" onclick="handleStartReacting(event)" class="btn btn-primary">
-        Get Started
-      </a>
-
-    </div>
-
-  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -117,33 +108,24 @@
 
       <h1>
         The all-in-one <br/>
-        <span class="gradient-text">social growth</span>
+        <span class="gradient-text">
+          social growth
+        </span>
         platform.
       </h1>
 
       <p>
-        Automated delivery for Instagram, TikTok, Twitter, WhatsApp and more.
+        Automated delivery for Instagram, TikTok, Twitter,
+        WhatsApp and more.
       </p>
-
-      <div class="hero-cta">
-
-        <a href="#" onclick="handleStartReacting(event)"
-          class="btn btn-primary btn-lg">
-          Start Growing
-        </a>
-
-        <a href="#platforms" class="btn btn-ghost btn-lg">
-          View Platforms
-        </a>
-
-      </div>
 
     </div>
 
   </section>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
