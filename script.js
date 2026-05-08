@@ -1,57 +1,50 @@
-/* ===== INITIALIZATION ===== */
+/* ===== INITIALISATION ===== */
 document.addEventListener("DOMContentLoaded", () => {
-    // Écouteur pour la touche "Enter"
     const passInput = document.getElementById("pass");
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    // Ecouteur pour la touche Entrée sur le mot de passe
     if (passInput) {
-        passInput.addEventListener("keypress", function(e) {
-            if (e.key === "Enter") {
-                login();
-            }
+        passInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") login();
         });
     }
 
-    // Menu Mobile
-    const navToggle = document.getElementById("nav-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
-    
+    // Gestion du menu mobile
     if (navToggle && mobileNav) {
         navToggle.addEventListener("click", () => {
             mobileNav.classList.toggle("open");
-            // Change l'icône du hamburger en croix quand c'est ouvert
             const icon = navToggle.querySelector("i");
-            if (mobileNav.classList.contains("open")) {
-                icon.classList.replace("fa-bars", "fa-times");
-            } else {
-                icon.classList.replace("fa-times", "fa-bars");
-            }
+            // Change l'icône
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-times");
         });
     }
 });
 
-/* ===== PASSWORD SYSTEM ===== */
-const PASS = "NAXE-7";
+/* ===== SYSTÈME D'ACCÈS ===== */
+const PASS_CODE = "NAXE-7";
 
 function login() {
     const input = document.getElementById("pass");
     const err = document.getElementById("err");
-    
-    // .trim() enlève les espaces vides avant et après le mot de passe
-    let v = input.value.trim().toUpperCase();
+    const authScreen = document.getElementById("auth");
+    const appScreen = document.getElementById("app");
 
-    if (v === PASS) {
-        /* HIDE LOGIN */
-        document.getElementById("auth").classList.add("hidden");
+    // Nettoyage de la saisie (majuscules et suppression des espaces)
+    const val = input.value.trim().toUpperCase();
 
-        /* SHOW SITE */
-        document.getElementById("app").classList.remove("hidden");
-
-        /* START SYSTEMS */
+    if (val === PASS_CODE) {
+        authScreen.classList.add("hidden");
+        appScreen.classList.remove("hidden");
         startClock();
     } else {
         err.style.display = "block";
         input.style.borderColor = "#ef4444";
-        input.style.boxShadow = "0 0 0 4px rgba(239,68,68,.15)";
+        input.style.boxShadow = "0 0 0 4px rgba(239, 68, 68, 0.15)";
 
+        // Reset visuel après 1.2s
         setTimeout(() => {
             input.style.borderColor = "";
             input.style.boxShadow = "";
@@ -59,15 +52,20 @@ function login() {
     }
 }
 
-/* ===== CLOCK ===== */
+/* ===== HORLOGE TEMPS RÉEL ===== */
 function startClock() {
-    const clock = document.getElementById("clock");
-    if (!clock) return;
+    const clockElement = document.getElementById("clock");
+    if (!clockElement) return;
 
-    // Affiche l'heure immédiatement sans attendre la première seconde
-    clock.innerText = new Date().toLocaleTimeString("fr-FR");
+    const updateTime = () => {
+        const now = new Date();
+        clockElement.innerText = now.toLocaleTimeString("fr-FR", {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+    };
 
-    setInterval(() => {
-        clock.innerText = new Date().toLocaleTimeString("fr-FR");
-    }, 1000);
+    updateTime(); // Appel immédiat
+    setInterval(updateTime, 1000);
 }
